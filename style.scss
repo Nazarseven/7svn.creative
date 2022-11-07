@@ -10,6 +10,10 @@ $color3: #333;
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Poppins', sans-serif;
     /* font-family: 'Roboto', sans-serif */
@@ -124,7 +128,7 @@ body{
         margin-top: 50px;
         .col3{
             flex-basis: 31%;
-            border: 2px solid $color2;
+            background-color: $color1;
             border-radius: 5px;
             padding: 25px 25px;
             min-height: 330px;
@@ -168,6 +172,30 @@ body{
                     color: $color2;
                 }
             }
+            &:nth-child(2){
+                background-color: $color2;
+                h1{
+                    color: $color1;
+                }
+                h3{
+                    color: $color1;
+                }
+                p{
+                    color: $color1;
+                }
+                &:hover{
+                    background-color: $color1;
+                    h1{
+                        color: $color3;
+                    }
+                    h3{
+                        color: $color2;
+                    }
+                    p{
+                        color: $color3;
+                    }
+                }
+            }
             h1{
                 font-size: 35px;
                 color: $color3;
@@ -176,6 +204,9 @@ body{
             h3{
                 color: $color2;
                 margin-bottom: 10px;
+            }
+            p{
+                color: $color3;
             }
         }
     }

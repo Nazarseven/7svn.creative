@@ -6,6 +6,10 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   /* font-family: 'Roboto', sans-serif */
@@ -131,7 +135,7 @@ body {
 #section1 .row .col3 {
   -ms-flex-preferred-size: 31%;
       flex-basis: 31%;
-  border: 2px solid #1a4685;
+  background-color: #e5e5e5;
   border-radius: 5px;
   padding: 25px 25px;
   min-height: 330px;
@@ -182,6 +186,30 @@ body {
 #section2 .row .col4:hover h1 {
   color: #1a4685;
 }
+#section2 .row .col4:nth-child(2) {
+  background-color: #1a4685;
+}
+#section2 .row .col4:nth-child(2) h1 {
+  color: #e5e5e5;
+}
+#section2 .row .col4:nth-child(2) h3 {
+  color: #e5e5e5;
+}
+#section2 .row .col4:nth-child(2) p {
+  color: #e5e5e5;
+}
+#section2 .row .col4:nth-child(2):hover {
+  background-color: #e5e5e5;
+}
+#section2 .row .col4:nth-child(2):hover h1 {
+  color: #333;
+}
+#section2 .row .col4:nth-child(2):hover h3 {
+  color: #1a4685;
+}
+#section2 .row .col4:nth-child(2):hover p {
+  color: #333;
+}
 #section2 .row .col4 h1 {
   font-size: 35px;
   color: #333;
@@ -191,6 +219,9 @@ body {
 #section2 .row .col4 h3 {
   color: #1a4685;
   margin-bottom: 10px;
+}
+#section2 .row .col4 p {
+  color: #333;
 }
 
 #section3 {
