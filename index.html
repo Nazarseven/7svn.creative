@@ -10,6 +10,19 @@
     <link rel="stylesheet" href="animate.css">
 </head>
 <body>
+    <div id="fixed-menu">
+        <img src="img/menu.png" id="fixed-logo" class="fixed-logo" alt="">
+        <img src="img/menu.png" id="fixed-close" class="fixed-logo" alt="">
+    </div>
+    <div id="fixed-absolute">
+        <ul>
+            <li><a href=""><img src="img/tg.png" alt=""><p>Telegram</p></a></li>
+            <li><a href=""><img src="img/ig.png" class="ig" alt=""><p>Instagram</p></a></li>
+            <li><a href=""><img src="img/icq.png" class="icq" alt=""><p>Icq</p></a>
+                <li><a href=""><img src="img/gmail.png" class="gmail" alt=""><p>Gmail</p></a>
+            </li>
+        </ul>
+    </div>
     <header id="header">
         <div class="container">
             <nav>
@@ -153,6 +166,25 @@
     <!-- WOW JS -->
 
     <script src="wow.min.js"></script>
+    <script>
+        const fixedAbsolute = document.getElementById('fixed-absolute')
+        const fixedLogo = document.getElementById('fixed-logo')
+        const fixedClose = document.getElementById('fixed-close')
+
+        fixedLogo.addEventListener('click', () => {
+            fixedAbsolute.style.visibility = 'visible'
+            fixedAbsolute.style.opacity = '1'
+            fixedClose.style.display = 'block'
+        })
+
+        fixedClose.addEventListener('click', () => {
+            fixedAbsolute.style.visibility = 'hidden'
+            fixedAbsolute.style.opacity = '0'
+            fixedClose.style.display = 'none'
+            fixedLogo.style.visibility = 'visible'
+        })
+
+    </script>
     <script>
         new WOW().init();
     </script>

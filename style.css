@@ -45,6 +45,14 @@ body {
           align-items: center;
 }
 
+#fixed-menu {
+  display: none;
+}
+
+#fixed-absolute {
+  display: none;
+}
+
 #header nav {
   padding: 25px 25px;
   background-color: #e5e5e5;
@@ -451,6 +459,93 @@ body {
   }
 }
 @media only screen and (max-width: 545px) {
+  #fixed-menu {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    display: block;
+    z-index: 60;
+    background-color: #1a4685;
+    padding: 15px;
+    padding-bottom: 10px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-animation-name: menu;
+            animation-name: menu;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  #fixed-menu #fixed-logo {
+    width: 30px;
+    height: 30px;
+  }
+  #fixed-menu #fixed-close {
+    width: 30px;
+    height: 30px;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 100;
+    opacity: 0;
+  }
+  #fixed-absolute {
+    position: fixed;
+    bottom: 18%;
+    right: 5.5%;
+    display: block;
+    width: 80%;
+    z-index: 66;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  #fixed-absolute ul {
+    background-color: #e5e5e5;
+    border: 2px solid #1a4685;
+    border-radius: 15px;
+    padding: 10px 0;
+  }
+  #fixed-absolute ul li {
+    list-style: none;
+    padding: 10px 20px;
+  }
+  #fixed-absolute ul li a {
+    text-decoration: none;
+    color: #1a4685;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 20px;
+  }
+  #fixed-absolute ul li a img {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+  }
+  #fixed-absolute ul li a .ig {
+    width: 26px;
+    height: 26px;
+  }
+  #fixed-absolute ul li a .icq {
+    width: 23px;
+    height: 23px;
+    margin-left: 2px;
+    margin-right: 6px;
+  }
+  #fixed-absolute ul li a .gmail {
+    width: 23px;
+    height: 23px;
+  }
   #section4 {
     background-color: #e5e5e5;
     padding: 40px 0;
@@ -568,5 +663,27 @@ body {
         flex-basis: 100%;
     height: 100px;
     overflow: hidden;
+  }
+}
+@-webkit-keyframes menu {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+@keyframes menu {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
   }
 }
