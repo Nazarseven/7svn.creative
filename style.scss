@@ -383,6 +383,72 @@ body{
     color: $color1;
 }
 
+#form{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 30px 25px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
+    z-index: 99;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-in-out;
+    h2{
+        margin-bottom: 25px;
+        font-size: 22px;
+        color: $color3;
+    }
+    form{
+        input, textarea{
+            font-family: 'Poppins', sans-serif;
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 13px 10px;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            font-size: 15px;
+            background-color: $color1;
+            &::placeholder{
+                color: $color3;
+            }
+        }
+        textarea{
+            resize: none;
+            height: 150px;
+        }
+        button{
+            width: 100%;
+            border: none;
+            outline: none;
+            background-color: $color2;
+            color: $color1;
+            padding: 14px 0;
+            font-size: 17px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+            &:hover{
+                background: lighten($color: $color2, $amount: 5);
+            }
+        }
+    }
+    #close-form{
+        position: absolute;
+        top: 4%;
+        right: 7%;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+}
+
 @media only screen and (max-width: 1066px){
     #section1{
         .row{
@@ -621,7 +687,10 @@ body{
             }
         }
     }
-}
+    }
+    #form{
+        width: 80%;
+    }
 }
 
 @media only screen and (max-width: 500px){

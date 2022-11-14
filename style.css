@@ -397,6 +397,86 @@ body {
   color: #e5e5e5;
 }
 
+#form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 30px 25px;
+  width: 400px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+#form h2 {
+  margin-bottom: 25px;
+  font-size: 22px;
+  color: #333;
+}
+#form form input, #form form textarea {
+  font-family: "Poppins", sans-serif;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 13px 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  background-color: #e5e5e5;
+}
+#form form input::-webkit-input-placeholder, #form form textarea::-webkit-input-placeholder {
+  color: #333;
+}
+#form form input::-moz-placeholder, #form form textarea::-moz-placeholder {
+  color: #333;
+}
+#form form input:-ms-input-placeholder, #form form textarea:-ms-input-placeholder {
+  color: #333;
+}
+#form form input::-ms-input-placeholder, #form form textarea::-ms-input-placeholder {
+  color: #333;
+}
+#form form input::placeholder, #form form textarea::placeholder {
+  color: #333;
+}
+#form form textarea {
+  resize: none;
+  height: 150px;
+}
+#form form button {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: #1a4685;
+  color: #e5e5e5;
+  padding: 14px 0;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#form form button:hover {
+  background: #1e519a;
+}
+#form #close-form {
+  position: absolute;
+  top: 4%;
+  right: 7%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 1066px) {
   #section1 .row .col3 {
     height: 380px;
@@ -616,6 +696,9 @@ body {
   #footer .row .col3 .right p {
     font-size: 14px;
     color: #1a4685;
+  }
+  #form {
+    width: 80%;
   }
 }
 @media only screen and (max-width: 500px) {

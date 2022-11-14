@@ -35,13 +35,13 @@
                         <li><a href="#section1">УСЛУГИ</a></li>
                         <li><a href="#footer">КОНТАКТЫ</a></li>
                     </ul>
-                    <button>Оставить заявку</button>
+                    <button id="openForm">Оставить заявку</button>
                 </div>
             </nav>
             <div class="wow fadeIn header">
                 <h1>Помогаем развивать онлайн бизнес</h1>
                 <p>Помогаем предприятиям систематизировать работу в онлайн, выстраивать комплексную автоматизацию и повышать эффективность.</p>
-                <button>Оставить заявку</button>
+                <button id="openForm2">Оставить заявку</button>
             </div>
         </div>
     </header>
@@ -127,7 +127,7 @@
                     <h4>Пишите на <span>it.turkmen.web@gmail.com</span><br> или заполните форму</h4>
                 </div>
                 <div class="wow fadeIn col3">
-                    <button>Оставить заявку</button>
+                    <button id="openForm3">Оставить заявку</button>
                 </div>
             </div>
         </div>
@@ -162,6 +162,17 @@
     <div class="wow fadeIn" id="inner-footer">
         Since 2022 - Ähli Hukuklar Goralan
     </div>
+    <div id="form">
+        <h2>Оставить заявку</h2>
+        <form action="">
+            <input type="text" placeholder="Имя">
+            <input type="number" placeholder="Телефон">
+            <input type="text" placeholder="Компания">
+            <textarea placeholder="Ваше сообщение..."></textarea>
+            <button>Отправить</button>
+        </form>
+        <img src="img/close2.png" id="close-form" alt="">
+    </div>
 
     <!-- WOW JS -->
 
@@ -170,6 +181,11 @@
         const fixedAbsolute = document.getElementById('fixed-absolute')
         const fixedLogo = document.getElementById('fixed-logo')
         const fixedClose = document.getElementById('fixed-close')
+        const openForm = document.getElementById('openForm')
+        const closeForm = document.getElementById('close-form')
+        const openForm2 = document.getElementById('openForm2')
+        const openForm3 = document.getElementById('openForm3')
+        const form = document.getElementById('form')
 
         fixedLogo.addEventListener('click', () => {
             fixedAbsolute.style.visibility = 'visible'
@@ -182,6 +198,24 @@
             fixedAbsolute.style.opacity = '0'
             fixedClose.style.display = 'none'
             fixedLogo.style.visibility = 'visible'
+        })
+
+        openForm.addEventListener('click', () => {
+            form.style.visibility = 'visible'
+            form.style.opacity = '1'
+        })
+        openForm2.addEventListener('click', () => {
+            form.style.visibility = 'visible'
+            form.style.opacity = '1'
+        })
+        openForm3.addEventListener('click', () => {
+            form.style.visibility = 'visible'
+            form.style.opacity = '1'
+        })
+
+        closeForm.addEventListener('click', () => {
+            form.style.visibility = 'hidden'
+            form.style.opacity = '0'
         })
 
     </script>
